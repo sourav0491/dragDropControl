@@ -1,0 +1,16 @@
+<div>
+    <!-- <div class="example-box" #root cdkDrag (cdkDragEnded)="drop($event)">
+    textbox
+  </div> -->
+
+    <div class="example-box" type="text" cdkDrag (cdkDragEnded)="drop($event)">textbox</div>
+
+    <div class="example-box" type="text" cdkDrag (cdkDragEnded)="drop($event)">radio</div>
+
+    <!-- <pdf-viewer [src]="src" [original-size]="false" [show-all]="true" [stick-to-page]="true" CdkDropList></pdf-viewer> -->
+
+    <div class="dropZone" #root CdkDropList>
+        drop here
+    </div>
+
+    <div>
