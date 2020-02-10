@@ -12,14 +12,14 @@ export class AppComponent {
 
   drop(ev): void {
     console.log('element dropped');
-    console.log(ev);
-    const div = this.renderer.createElement('div');
-    const input = this.renderer.createElement('input');
-    this.renderer.appendChild(div, input);
-    this.renderer.appendChild(this.root.nativeElement, div);
-    this.renderer.setStyle(this.root.nativeElement, 'position', 'relative');
-    this.renderer.setStyle(this.root.nativeElement, 'left', ev.distance.x);
-    this.renderer.setStyle(this.root.nativeElement, 'top', ev.distance.y);
+    // console.log(ev);
+    // const div = this.renderer.createElement('div');
+    // const input = this.renderer.createElement('input');
+    // this.renderer.appendChild(div, input);
+    // this.renderer.appendChild(this.root.nativeElement, div);
+    // this.renderer.setStyle(this.root.nativeElement, 'position', 'relative');
+    // this.renderer.setStyle(this.root.nativeElement, 'left', ev.distance.x);
+    // this.renderer.setStyle(this.root.nativeElement, 'top', ev.distance.y);
 
   }
 }
