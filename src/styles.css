@@ -1,42 +1,42 @@
-/* Add application styles & imports to this file! */
-body {
-  height: 100vh;
-  overflow: hidden;
-}
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-/* Draggable*/
-
-.drag-border {
-  border: #ff525b dashed 2px;
-}
-
-.drag-handle {
-  cursor: move; /* fallback if grab cursor is unsupported */
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
-}
-
-.drag-handle:active { 
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
-}
-
-/* Droppable */
-
-.drag-hint-border {
-  border: #3c763d dashed 2px;
-}
-
-.drag-over-border {
-  border: #fbbc05 dashed 2px;
-}
-
-.drag-transit {
-  border: #3500FF dashed 2px;
-}
+html, body, div, h1, h2, h3, p, blockquote, ul, ol, li, pre { 
+  margin: 0; padding: 0 }
+  li { margin-left: 1.5em }
+  
+  @page {size: a4; margin: 20mm }
+  @media screen { body { margin: 5em }}
+  
+  body { font: 11pt Georgia, serif }
+  q::before { content: "\201C"; }
+  q::after { content: "\201D"; }
+  q { font-style: italic }
+  h1 { font-size: 3em; font-family: "Ubuntu Condensed"; padding: 0 0 3em }
+  h2, h3 { font-size: 1.1em; margin: 0.8em 0 0.4em }
+  p, li { margin: 0.2em 0 0.4em }
+  ul, ol { margin: 0.2em 0 0.4em 1.5em }
+  a { text-decoration: none; color: inherit }
+  
+  table { width: 100%; margin: 1em 0; padding: 0; border: none; border-collapse: collapse }
+  tr, td, th {
+  padding: 0;
+  text-align: left;
+  border: none;
+  vertical-align: top;
+  }
+  
+  tr.total td { background: #ddd; padding: 0.2em 0 }
+  tr.item td { background: #eee; padding: 0.2em 0 }
+  tr.head td { font-weight: bold; padding: 1.5em 0 0.2em 0; border-bottom: thin solid black }
+  tr.instruction td { padding: 3em 0 1em }
+  table .amount { text-align: right }
+  
+  address { white-space: pre; padding: 0 0 1em; font-style: normal }
+  aside { float: right; width: 10em }
+  footer { float: bottom; text-align: center }
+  
+  body.usd td.currency:before { content: "USD\A0$" }
+  body.eur td.currency:before { content: "EUR\A0\20AC\A0" }
+  body.aud td.currency:before { content: "AUD\A0$" }
+  
+  body.eur tr.usd, body.eur tr.aud { display: none }
+  body.usd tr.eur, body.usd tr.aud { display: none }
+  body.aud tr.eur, body.aud tr.usd { display: none }
